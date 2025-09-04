@@ -8,12 +8,12 @@
 <body>
   <script>
     (function() {
-      const path = window.location.pathname;
+      const { href, pathname } = window.location;
 
-      if (path.startsWith('/front_6th_chapter4-1/vanilla/')) {      
-        window.location.replace('/front_6th_chapter4-1/vanilla/404.html');
+      if (pathname.startsWith('/front_6th_chapter4-1/vanilla/')) {      
+        window.location.replace(`/front_6th_chapter4-1/vanilla/404.html?href=${encodeURIComponent(href)}`);
       } else  {
-        window.location.replace('/front_6th_chapter4-1/react/404.html');   
+        window.location.replace(`/front_6th_chapter4-1/react/404.html?href=${encodeURIComponent(href)}`);   
       }
     })();
   </script>

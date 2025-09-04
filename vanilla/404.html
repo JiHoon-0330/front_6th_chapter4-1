@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title></title>
+    <link rel="stylesheet" href="/src/styles.css">
     <script>
       tailwind.config = {
         theme: {
@@ -17,8 +18,6 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/front_6th_chapter4-1/vanilla/assets/index-Ci-yOCVX.js"></script>
-    <link rel="stylesheet" crossorigin href="/front_6th_chapter4-1/vanilla/assets/index-DVL8oARQ.css">
   </head>
   <body class="bg-gray-50">
     <div id="root">
@@ -91,6 +90,17 @@
   
     </div>
   </div>
+    <script type="module" src="/src/main.js"></script>
     <script>window.__INITIAL_DATA__ = {};</script>
+    <script>
+      (function() {
+        const { href ,search} = window.location;
+        const prevHref = new URLSearchParams(search).get("href");
+
+        if(prevHref) {
+          window.history.replaceState(null, "", decodeURIComponent(href));
+        }
+      })();
+    </script>
   </body>
 </html>
